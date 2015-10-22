@@ -109,6 +109,8 @@ class Level
   end
 
   def add_experience(pts)
+    @experience += pts
+    experience(@experience)
   end
 end
 
