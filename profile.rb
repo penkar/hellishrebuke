@@ -87,18 +87,25 @@ class Race
   attr_accessor :race
 end
 
-class level
-  attr_reader :level, :experience
+class Level
+  attr_reader :level, :experience, :proficiency
   def initialize
     @level = 0
     @experience = 0
   end
 
   def level(level)
-
+    @level = level
+    @experience = $experience[level]
+    @proficiency = $proficiency[level]
   end
 
   def experience(pts)
+    threshold = pts
+    $level.keys.each do |x|
+      threshold = x if pts - x > 1
+    end
+    $level[threshold]
   end
 
   def add_experience(pts)
