@@ -31,24 +31,24 @@ class Ability
 
   def race_change(newRace, oldRace = false)
     races = {
-      mountain_dwarf: {strength: 2},
       half_orc: {constitution: 1, strength: 2},
       human: {charisma: 1, wisdom: 1, constitution: 1, intelligence: 1, dexterity: 1, strength: 1},
       dragonborn: {charisma: 1, strength: 2},
-      elf: {dexterity: 2},
       forest_gnome: {dexterity: 1},
       halfling: {dexterity: 2},
       dwarf: {constitution: 2},
+      mountain_dwarf: {strength: 2},
+      hill_dwarf: {wisdom: 1},
       rock_gnome: {constitution: 1},
       stout_halfling: {constitution: 1},
-      high_elf: {intelligence: 1},
       tiefling: {charisma: 2, intelligence: 1},
       gnome: {intelligence: 2},
       lightfoot_halfling: {charisma: 1},
       drow: {charisma: 1},
+      elf: {dexterity: 2},
       half_elf: {charisma: 2},
-      hill_dwarf: {wisdom: 1},
-      wood_elf: {wisdom: 1}
+      wood_elf: {wisdom: 1},
+      high_elf: {intelligence: 1}
     }
     race_decrement(races[oldRace.to_sym]) if oldRace
     race_increment(races[newRace.to_sym]) if newRace
