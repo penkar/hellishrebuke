@@ -1,6 +1,2 @@
-module Race
-
-end
-
-
-require_relative 'elf.rb'
+require_relative 'elf'
+require_relative 'dwarf'

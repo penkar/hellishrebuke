@@ -12,7 +12,7 @@ class RaceClass
   end
 
   def subclasses
-    return 'hilldwarf, mountaindwarf'
+    return 'dwarf, elf'
   end
 
   def ability_scores
