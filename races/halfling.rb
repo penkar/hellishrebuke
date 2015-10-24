@@ -18,6 +18,6 @@ class Halfling < RaceClass
 
   def stout
     @constitution += 1
-    @toughness = 'Stout Resilience  '
+    @toughness = 'Stout Resilience'
   end
 end
