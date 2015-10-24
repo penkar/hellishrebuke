@@ -1,3 +1,5 @@
+require './races/races.rb'
+
 class Character
   attr_accessor :ability, :race, :name
   def initialize(name)
