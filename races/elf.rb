@@ -3,7 +3,7 @@ class Elf < RaceClass
   def initialize(subclass = false)
     super
     @dexterity += 2
-    @speed += 30
+    @movement += 30
     @vision = 'superior dark'
     self.send(subclass) if subclass
   end

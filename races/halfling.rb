@@ -3,7 +3,7 @@ class Halfling < RaceClass
   def initialize(subclass = false)
     super
     @dexterity += 2
-    @speed += 25
+    @movement += 25
     self.send(subclass) if subclass
   end
 

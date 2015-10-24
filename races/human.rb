@@ -8,7 +8,7 @@ class Human < RaceClass
     @intelligence = 1
     @constitution = 1
     @charisma = 1
-    @speed += 30
+    @movement += 30
     self.send(subclass) if false #subclass
   end
 
