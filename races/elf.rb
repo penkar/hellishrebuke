@@ -19,6 +19,7 @@ class Elf < RaceClass
   def woodelf
     @wisdom += 2
     @speed = 35
+    @stealth = 'Mask of the Wind'
   end
 
   def darkelf

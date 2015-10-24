@@ -13,6 +13,7 @@ class Dwarf < RaceClass
 
   def hilldwarf
     @wisdom += 1
+    @toughness = 'hit point max +1 per level'
   end
 
   def mountaindwarf

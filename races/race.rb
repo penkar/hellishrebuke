@@ -1,5 +1,5 @@
 class RaceClass
-  attr_accessor :strength, :dexterity, :wisdom, :intelligence, :constitution, :charisma, :vision, :movement
+  attr_accessor :strength, :dexterity, :wisdom, :intelligence, :constitution, :charisma, :vision, :movement, :toughness, :stealth
   def initialize(subclass = false)
     @strength = 0
     @dexterity = 0
@@ -9,6 +9,8 @@ class RaceClass
     @charisma = 0
     @vision = 'normal'
     @movement = 0
+    @stealth = ''
+    @toughness = ''
   end
 
   def subclasses
