@@ -7,7 +7,7 @@ class Dwarf < RaceClass
     self.send(subclass) if subclass
   end
 
-  def subclasses
+  def self.subclasses
     return 'hilldwarf, mountaindwarf'
   end
 

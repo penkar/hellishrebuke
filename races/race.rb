@@ -13,8 +13,8 @@ class RaceClass
     @toughness = ''
   end
 
-  def subclasses
-    return 'dwarf, elf'
+  def self.subclasses
+    return 'dwarf, elf, halfling, human'
   end
 
   def ability_scores

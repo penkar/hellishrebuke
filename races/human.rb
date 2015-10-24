@@ -12,7 +12,7 @@ class Human < RaceClass
     self.send(subclass) if false #subclass
   end
 
-  def subclasses
+  def self.subclasses
     return 'none'
   end
 end

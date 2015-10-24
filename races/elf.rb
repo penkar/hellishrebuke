@@ -8,7 +8,7 @@ class Elf < RaceClass
     self.send(subclass) if subclass
   end
 
-  def subclasses
+  def self.subclasses
     return 'highelf, woodelf, drow, darkelf'
   end
 

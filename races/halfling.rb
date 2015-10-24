@@ -7,7 +7,7 @@ class Halfling < RaceClass
     self.send(subclass) if subclass
   end
 
-  def subclasses
+  def self.subclasses
     return 'lightfoot, stout'
   end
 
