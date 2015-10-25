@@ -1,13 +1,6 @@
 class Classes
   attr_accessor :skills, :hitpoints
-  # :strength, :dexterity, :wisdom, :intelligence, :constitution, :charisma, 
-  def initialize(skill1, skill2)
-    # @strength = 0
-    # @dexterity = 0
-    # @wisdom = 0
-    # @intelligence = 0
-    # @constitution = 0
-    # @charisma = 0
+  def initialize(skill1, skill2, skill3 = false, skill4 = false)
     @skills = []
     @hitpoints = 0
   end
