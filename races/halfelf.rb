@@ -1,5 +1,5 @@
 require_relative 'race'
-class Halfelf < RaceClass
+class Halfelf < RaceClass###TODO 2 proficiencies
   def initialize(subclass = false, ability1 = false, ability2 = false)
     super
     pt1, pt2, pt3 = 2, 1, 1

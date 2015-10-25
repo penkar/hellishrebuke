@@ -5,6 +5,7 @@ class Elf < RaceClass
     @dexterity += 2
     @movement += 30
     @vision = 'superior dark'
+    @skills = ['perception']
     self.send(subclass) if subclass
   end
 
