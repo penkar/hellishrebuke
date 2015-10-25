@@ -9,6 +9,14 @@ class Gnome < RaceClass
   end
 
   def self.subclasses
-    return 'Please enter 2 extra abilities.'
+    return 'forestgnome, rockgnome'
+  end
+
+  def forestgnome
+    @dexterity += 1
+  end
+
+  def rockgnome
+    @constitution += 1
   end
 end
