@@ -6,7 +6,7 @@ class Tiefling < RaceClass
     @charisma += 2
     @movement += 30
     @vision = 'superior dark'
-    @resistance = 'fire'
+    @resistance = @resistance.push('fire')
     self.send(subclass) if subclass
   end
 

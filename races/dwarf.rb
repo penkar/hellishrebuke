@@ -4,7 +4,7 @@ class Dwarf < RaceClass
     super
     @constitution += 2
     @movement += 25
-    @resistance = 'poison'
+    @resistance = @resistance.push('poison')
     self.send(subclass) if subclass
   end
 

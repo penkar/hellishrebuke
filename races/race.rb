@@ -14,11 +14,11 @@ class RaceClass
     @stealth = ''
     @toughness = ''
     @skills = []
-    @resistance = ''
+    @resistance = []
   end
 
   def self.subclasses
-    return 'Dwarf, Elf, Halfling, Human, Dragonborn, Gnome, Halfelf, Halford, Tiefling'
+    return 'Dwarf, Elf, Halfling, Human, Dragonborn, Gnome, Halfelf, Halforc, Tiefling'
   end
 
   def ability_scores

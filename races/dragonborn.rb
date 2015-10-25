@@ -8,7 +8,7 @@ class Dragonborn < RaceClass
     @charisma += 1
     @movement += 30
     self.dragon if subclass
-    @resistance = @damage
+    @resistance = @resistance.push(@damage)
     # self.send(subclass) if subclass
   end
 
