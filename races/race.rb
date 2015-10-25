@@ -12,7 +12,7 @@ class RaceClass
     @vision = 'normal'
     @movement = 0
     @stealth = ''
-    @toughness = ''
+    @toughness = []
     @skills = []
     @resistance = []
   end

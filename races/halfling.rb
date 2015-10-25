@@ -18,7 +18,7 @@ class Halfling < RaceClass
 
   def stout
     @constitution += 1
-    @toughness = 'Stout Resilience'
+    @toughness = @toughness.push('Stout Resilience')
     @resistance = @resistance.push('poison')
   end
 end
