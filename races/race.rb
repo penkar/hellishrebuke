@@ -1,6 +1,7 @@
 class RaceClass
   attr_accessor :strength, :dexterity, :wisdom, :intelligence, :constitution, :charisma, :vision, :movement, :toughness, :stealth, :subclass
-  def initialize(subclass = false)
+  def initialize(subclass = false, generic1 = false, generic2 = false)
+    # self.subclasses unless subclass
     @subclass = subclass
     @strength = 0
     @dexterity = 0
@@ -15,7 +16,7 @@ class RaceClass
   end
 
   def self.subclasses
-    return 'dwarf, elf, halfling, human, dragonborn'
+    return 'Dwarf, Elf, Halfling, Human, Dragonborn, Gnome, Halfelf'
   end
 
   def ability_scores
