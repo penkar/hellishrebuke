@@ -8,6 +8,6 @@ class Cleric < Classes
   end
 
   def self.skills
-    return "history, insight, medicine, persuasion, religion"
+    return "Choose 2 skills from: history, insight, medicine, persuasion, and religion"
   end
 end

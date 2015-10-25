@@ -8,6 +8,6 @@ class Sorcerer < Classes
   end
 
   def self.skills
-    return "arcana, deception, insight, intimidation, persuasion, religion"
+    return "Choose 2 skills from: arcana, deception, insight, intimidation, persuasion, and religion"
   end
 end

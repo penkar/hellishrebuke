@@ -8,6 +8,6 @@ class Monk < Classes
   end
 
   def self.skills
-    return hash = "acrobatics, athletics, history, insight, religion, stealth"
+    return hash = "Choose 2 skills from: acrobatics, athletics, history, insight, religion, and stealth"
   end
 end

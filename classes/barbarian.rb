@@ -8,7 +8,7 @@ class Barbarian < Classes
   end
 
   def self.skills
-    return "animal_handling, athletics, intimidation, nature, perception, survival"
+    return "Choose 2 skills from: animal_handling, athletics, intimidation, nature, perception, and survival"
   end
 end
 #hash = {acrobatics: true, animal_handling: true, arcana: true, athletics: true, deception: true, history: true, insight: true, intimidation: true, investigation: true, medicine: true, nature: true, perception: true, performance: true, persuasion: true, religion: true, sleight_of_hand: true, stealth: true, survival: true}

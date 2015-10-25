@@ -8,6 +8,6 @@ class Fighter < Classes
   end
 
   def self.skills
-    return "acrobatics, animal_handling, athletics, history, insight, intimidation, perception, survival"
+    return "Choose 2 skills from: acrobatics, animal_handling, athletics, history, insight, intimidation, perception, and survival"
   end
 end

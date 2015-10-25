@@ -10,6 +10,6 @@ class Rogue < Classes
   end
 
   def self.skills
-    return "acrobatics, athletics, deception, insight, intimidation, investigation, perception, performance, persuasion, sleight_of_hand, stealth"
+    return "Choose 4 skills from: acrobatics, athletics, deception, insight, intimidation, investigation, perception, performance, persuasion, sleight_of_hand, and stealth"
   end
 end

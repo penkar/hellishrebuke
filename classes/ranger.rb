@@ -9,6 +9,6 @@ class Ranger < Classes
   end
 
   def self.skills
-    return "animal_handling, athletics, insight, investigation, nature, perception, stealth, survival"
+    return "Choose 3 skills from: animal_handling, athletics, insight, investigation, nature, perception, stealth, and survival"
   end
 end

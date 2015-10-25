@@ -8,6 +8,6 @@ class Druid < Classes
   end
 
   def self.skills
-    return "animal_handling, arcana, insight, medicine, nature, perception, religion, survival"
+    return "Choose 2 skills from: animal_handling, arcana, insight, medicine, nature, perception, religion, and survival"
   end
 end

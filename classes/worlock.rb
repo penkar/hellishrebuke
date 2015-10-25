@@ -8,6 +8,6 @@ class Wizard < Classes
   end
 
   def self.skills
-    return "arcana, deception, history, intimidation, investigation, nature, religion"
+    return "Choose 2 skills from: arcana, deception, history, intimidation, investigation, nature, and religion"
   end
 end

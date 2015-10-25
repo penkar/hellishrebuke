@@ -8,6 +8,6 @@ class Bard < Classes
   end
 
   def self.skills
-    return "athletics, insight, intimidation, medicine, persuasion, religion"
+    return "Choose 2 skills from: athletics, insight, intimidation, medicine, persuasion, and religion"
   end
 end
