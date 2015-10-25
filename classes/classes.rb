@@ -1,3 +1,5 @@
 require_relative 'barbarian'
 require_relative 'bard'
 require_relative 'cleric'
+require_relative 'druid'
+require_relative 'fighter'
