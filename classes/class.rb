@@ -1,7 +1,6 @@
 class Classes
   attr_accessor :strength, :dexterity, :wisdom, :intelligence, :constitution, :charisma
-  def initialize(subclass = false)
-    @subclass = subclass
+  def initialize
     @strength = 0
     @dexterity = 0
     @wisdom = 0
