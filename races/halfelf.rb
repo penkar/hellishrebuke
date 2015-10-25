@@ -13,14 +13,6 @@ class Halfelf < RaceClass###TODO 2 proficiencies
   end
 
   def self.subclasses
-    return 'forestgnome, rockgnome'
-  end
-
-  def forestgnome
-    @dexterity += 1
-  end
-
-  def rockgnome
-    @constitution += 1
+    return 'input 2 ability1, input3 ability2'
   end
 end
