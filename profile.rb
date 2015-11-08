@@ -42,8 +42,6 @@ class Character
   end
 
   def choose_race(race, subclass = false, skill1 = false, skill2 = false)
-    puts skill1
-    puts skill2
     @race = $raceHash[race.to_sym].new(subclass, skill1, skill2)
   end
 
