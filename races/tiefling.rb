@@ -1,6 +1,6 @@
 require_relative 'race'
 class Tiefling < RaceClass
-  def initialize(subclass = false)
+  def initialize(subclass = false, ability1 = false, ability2 = false)
     super
     @intelligence += 1
     @charisma += 2

@@ -13,6 +13,6 @@ class Halfelf < RaceClass###TODO 2 proficiencies
   end
 
   def self.subclasses
-    return 'input 2 ability1, input3 ability2'
+    return 'input 2 abilities'
   end
 end

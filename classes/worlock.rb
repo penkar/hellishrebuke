@@ -1,5 +1,5 @@
 require_relative 'class'
-class Wizard < Classes
+class Worlock < Classes
   def initialize(skill1, skill2)
     super
     hash = {arcana: true, deception: true, history: true, intimidation: true, investigation: true, nature: true, religion: true}

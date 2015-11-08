@@ -1,6 +1,6 @@
 require_relative 'race'
 class Elf < RaceClass
-  def initialize(subclass = false)
+  def initialize(subclass = false, ability1 = false, ability2 = false)
     super
     @dexterity += 2
     @movement += 30

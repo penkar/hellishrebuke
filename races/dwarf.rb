@@ -1,6 +1,6 @@
 require_relative 'race'
 class Dwarf < RaceClass
-  def initialize(subclass = false)
+  def initialize(subclass = false, ability1 = false, ability2 = false)
     super
     @constitution += 2
     @movement += 25

@@ -2,7 +2,7 @@ require_relative 'race'
 class Dragonborn < RaceClass
   attr_accessor :damage, :breath
 
-  def initialize(subclass = false)
+  def initialize(subclass = false, ability1 = false, ability2 = false)
     super
     @strength += 2
     @charisma += 1

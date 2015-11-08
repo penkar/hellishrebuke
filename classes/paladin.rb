@@ -1,5 +1,5 @@
 require_relative 'class'
-class Bard < Classes
+class Paladin < Classes
   def initialize(skill1, skill2)
     super
     hash = {athletics: true, insight: true, intimidation: true, medicine: true, persuasion: true, religion: true}

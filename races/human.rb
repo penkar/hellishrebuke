@@ -1,6 +1,6 @@
 require_relative 'race'
 class Human < RaceClass
-  def initialize(subclass = false)
+  def initialize(subclass = false, ability1 = false, ability2 = false)
     super
     @strength = 1
     @dexterity = 1
