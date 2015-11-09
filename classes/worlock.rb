@@ -1,6 +1,6 @@
 require_relative 'class'
 class Worlock < Classes
-  def initialize(skill1, skill2)
+  def initialize(skill1, skill2, null = false, null2 = false)
     super
     hash = {arcana: true, deception: true, history: true, intimidation: true, investigation: true, nature: true, religion: true}
     @skills.push(skill1.to_sym) if hash[skill1.to_sym]

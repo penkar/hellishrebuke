@@ -1,6 +1,6 @@
 require_relative 'class'
 class Ranger < Classes
-  def initialize(skill1, skill2, skill3)
+  def initialize(skill1, skill2, skill3, null = false)
     super
     hash = {animal_handling: true, athletics: true, insight: true, investigation: true, nature: true, perception: true, stealth: true, survival: true}
     @skills.push(skill1.to_sym) if hash[skill1.to_sym]

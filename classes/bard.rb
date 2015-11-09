@@ -1,6 +1,6 @@
 require_relative 'class'
 class Bard < Classes
-  def initialize(skill1, skill2, skill3)
+  def initialize(skill1, skill2, skill3, null = false)
     super
     hash = {acrobatics: true, animal_handling: true, arcana: true, athletics: true, deception: true, history: true, insight: true, intimidation: true, investigation: true, medicine: true, nature: true, perception: true, performance: true, persuasion: true, religion: true, sleight_of_hand: true, stealth: true, survival: true}
     @skills.push(skill1.to_sym) if hash[skill1.to_sym]

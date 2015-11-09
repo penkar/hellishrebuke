@@ -1,6 +1,6 @@
 require_relative 'class'
 class Monk < Classes
-  def initialize(skill1, skill2)
+  def initialize(skill1, skill2, null = false, null2 = false)
     super
     hash = {acrobatics: true, athletics: true, history: true, insight: true, religion: true, stealth: true}
     @skills.push(skill1.to_sym) if hash[skill1.to_sym]

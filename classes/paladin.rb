@@ -1,6 +1,6 @@
 require_relative 'class'
 class Paladin < Classes
-  def initialize(skill1, skill2)
+  def initialize(skill1, skill2, null = false, null2 = false)
     super
     hash = {athletics: true, insight: true, intimidation: true, medicine: true, persuasion: true, religion: true}
     @skills.push(skill1.to_sym) if hash[skill1.to_sym]

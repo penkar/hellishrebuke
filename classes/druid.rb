@@ -1,6 +1,6 @@
 require_relative 'class'
 class Druid < Classes
-  def initialize(skill1, skill2)
+  def initialize(skill1, skill2, null = false, null2 = false)
     super
     hash = {animal_handling: true, arcana: true, insight: true, medicine: true, nature: true, perception: true, religion: true, survival: true}
     @skills.push(skill1.to_sym) if hash[skill1.to_sym]

@@ -1,6 +1,6 @@
 require_relative 'class'
 class Barbarian < Classes
-  def initialize(skill1, skill2)
+  def initialize(skill1, skill2, null = false, null2 = false)
     super
     hash = {animal_handling: true, athletics: true, intimidation: true, nature: true, perception: true, survival: true}
     @skills.push(skill1.to_sym) if hash[skill1.to_sym]

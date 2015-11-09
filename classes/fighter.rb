@@ -1,6 +1,6 @@
 require_relative 'class'
 class Fighter < Classes
-  def initialize(skill1, skill2)
+  def initialize(skill1, skill2, null = false, null2 = false)
     super
     hash = {acrobatics: true, animal_handling: true, athletics: true, history: true, insight: true, intimidation: true, perception: true, survival: true}
     @skills.push(skill1.to_sym) if hash[skill1.to_sym]

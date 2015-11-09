@@ -1,6 +1,6 @@
 require_relative 'class'
 class Sorcerer < Classes
-  def initialize(skill1, skill2)
+  def initialize(skill1, skill2, null = false, null2 = false)
     super
     hash = {arcana: true, deception: true, insight: true, intimidation: true, persuasion: true, religion: true}
     @skills.push(skill1.to_sym) if hash[skill1.to_sym]
