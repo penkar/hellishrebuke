@@ -19,19 +19,19 @@ class Elf < RaceClass
 
   def woodelf
     @wisdom += 2
-    @speed = 35
+    @movement = 35
     @stealth = 'Mask of the Wind'
   end
 
   def darkelf
     @charisma += 1
     @vision = 'superior darkvision'
-    @speed = 35
+    @movement = 35
   end
 
   def drow
     @charisma += 1
     @vision = 'superior darkvision'
-    @speed = 35
+    @movement = 35
   end
 end
