@@ -1,3 +1,4 @@
+require './personality/personalities.rb'
 require './races/races.rb'
 require './classes/classes.rb'
 require './proficiency/proficiencies.rb'
