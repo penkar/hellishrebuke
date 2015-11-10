@@ -31,8 +31,24 @@ $classHash = {
   Wizard: Wizard
 }
 
+$personalityHash = {
+  Acolyte: Acolyte,
+  Charlatan: Charlatan,
+  Criminal: Criminal,
+  Entertainer: Entertainer,
+  FolkHero: FolkHero,
+  GuildArtisan: GuildArtisan,
+  Hermit: Hermit,
+  Noble: Noble,
+  Outlander: Outlander,
+  Sage: Sage,
+  Sailor: Sailor,
+  Soldier: Soldier,
+  Urchin: Urchin
+}
+
 class Character
-  attr_accessor :ability, :race, :name, :proficiency, :class, :race
+  attr_accessor :ability, :race, :name, :proficiency, :class, :race, :personality
   def initialize(name)
     @name = name
     @proficiency = Proficiency.new
@@ -46,5 +62,7 @@ class Character
     @race = $raceHash[race.to_sym].new(subclass, skill1, skill2)
   end
 
-
+  def choose_personality(personality)
+    @personality = $personalityHash[personality.to_sym].new
+  end
 end

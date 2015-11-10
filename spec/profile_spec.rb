@@ -53,4 +53,25 @@ describe Character do
     expect(a.race.class).to eq(Elf)
     expect(a.race.charisma).to eq(1)
   end
+
+	it 'It Should be able to add a Personality for the character (Acolyte).' do
+		a = Character.new('Trajan')
+		a.choose_personality('Acolyte')
+		expect(a.personality.class).to eq(Acolyte)
+		expect(a.personality.skills.first).to eq(:insight)
+	end
+
+	it 'It Should be able to add a Personality for the character (GuildArtisan).' do
+		a = Character.new('Trajan')
+		a.choose_personality('GuildArtisan')
+		expect(a.personality.class).to eq(GuildArtisan)
+		expect(a.personality.skills.first).to eq(:insight)
+	end
+
+	it 'It Should be able to add a Personality for the character (Sailor).' do
+		a = Character.new('Trajan')
+		a.choose_personality('Sailor')
+		expect(a.personality.class).to eq(Sailor)
+		expect(a.personality.skills.first).to eq(:athletics)
+	end
 end
