@@ -1,6 +1,6 @@
 class Personality
   attr_accessor :skills, :languages, :personality
-  def initialize(personality)
+  def initialize
     @personality = personality
     @skills = []
     @languages = []
