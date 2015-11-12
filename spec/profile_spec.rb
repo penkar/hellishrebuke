@@ -74,4 +74,18 @@ describe Character do
 		expect(a.personality.class).to eq(Sailor)
 		expect(a.personality.skills.first).to eq(:athletics)
 	end
+
+
+
+
+
+	it 'It Should be able to apply class and personality proficiency.' do
+		a = Character.new('Trajan')
+		a.choose_class('Rogue', 'deception', 'perception', 'acrobatics', 'insight')
+		a.choose_personality('Sailor')
+		a.choose_race('Tiefling', 'black')
+		a.apply
+		expect(a.class.class).to eq(Rogue)
+		expect(a.class.skills.length).to eq(4)
+	end
 end
