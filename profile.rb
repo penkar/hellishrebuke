@@ -1,3 +1,4 @@
+require './skills/skills.rb'
 require './personality/personalities.rb'
 require './races/races.rb'
 require './classes/classes.rb'
@@ -30,7 +31,6 @@ $classHash = {
   Worlock: Worlock,
   Wizard: Wizard
 }
-
 $personalityHash = {
   Acolyte: Acolyte,
   Charlatan: Charlatan,
@@ -65,4 +65,11 @@ class Character
   def choose_personality(personality)
     @personality = $personalityHash[personality.to_sym].new
   end
+
+  def apply
+    return false unless @class.skills && @personality.skills && @race
+    @proficiency.apply_class_personality_modifiers(@class.skills, @personality.skills)
+    @proficiency.apply_race_modifiers(@race.ability_scores)
+  end
+
 end

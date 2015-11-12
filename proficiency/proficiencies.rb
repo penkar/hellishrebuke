@@ -28,7 +28,34 @@ class Proficiency
   #   return array.map!{rand(6)+1}.sort.last(3).inject(:+)
   # end
 
-  def apply_modifiers
+  def apply_race_modifiers(abilities)
+    p abilities
+
+  end
+
+  def apply_class_personality_modifiers(classarr, personalityarr)
+    array = classarr + personalityarr
+    @acrobatics += 2 if array.include? :acrobatics
+    @animal_handling += 2 if array.include? :animal_handling
+    @arcana += 2 if array.include? :arcana
+    @athletics += 2 if array.include? :athletics
+    @deception += 2 if array.include? :deception
+    @history += 2 if array.include? :history
+    @insight += 2 if array.include? :insight
+    @intimidation += 2 if array.include? :intimidation
+    @investigation += 2 if array.include? :investigation
+    @medicine += 2 if array.include? :investigation
+    @nature += 2 if array.include? :nature
+    @perception += 2 if array.include? :perception
+    @performance += 2 if array.include? :performance
+    @persuasion += 2 if array.include? :persuasion
+    @religion += 2 if array.include? :religion
+    @sleight_of_hand += 2 if array.include? :sleight_of_hand
+    @stealth += 2 if array.include? :stealth
+    @survival += 2 if array.include? :survival
+  end
+
+  def apply_personality_modifiers
 
   end
 
