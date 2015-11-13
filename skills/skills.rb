@@ -1,11 +1,18 @@
 class Skills
   attr_accessor :strength, :dexterity, :wisdom, :intelligence, :constitution, :charisma
-  def initialize
-
-  end
-
   def skill_list
     return [:strength, :dexterity, :wisdom, :intelligence, :constitution, :charisma]
+  end
+
+  def skills
+    return {
+      :strength => @strength,
+      :dexterity => @dexterity,
+      :wisdom => @wisdom,
+      :intelligence => @intelligence,
+      :constitution => @constitution,
+      :charisma => @charisma
+    }
   end
 
   def randomize_skills

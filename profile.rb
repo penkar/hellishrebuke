@@ -48,10 +48,15 @@ $personalityHash = {
 }
 
 class Character
-  attr_accessor :ability, :race, :name, :proficiency, :class, :race, :personality
+  attr_accessor :ability, :race, :name, :proficiency, :class, :race, :personality, :skills
   def initialize(name)
     @name = name
     @proficiency = Proficiency.new
+  end
+
+  def create_skills
+    @skills = Skills.new
+    @skills.randomize_skills
   end
 
   def choose_class(type, generic1, generic2, generic3 = false, generic4 = false)
