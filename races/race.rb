@@ -17,6 +17,17 @@ class RaceClass
     @resistance = []
   end
 
+  def skill_list
+    {
+      :strength => @strength,
+      :dexterity => @dexterity,
+      :wisdom => @wisdom,
+      :intelligence => @intelligence,
+      :constitution => @constitution,
+      :charisma => @charisma
+    }
+  end
+
   def self.subclasses
     return 'Dwarf, Elf, Halfling, Human, Dragonborn, Gnome, Halfelf, Halforc, Tiefling'
   end

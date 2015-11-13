@@ -37,8 +37,6 @@ describe Character do
     expect(a.name).to eq('Trajan')
 	end
 
-
-
   it 'It Should be able to add a class for the character weirdly(rogue).' do
     a = Character.new('Trajan')
     a.choose_class('Rogue', 'deception', 'perception', 'acrobatics', 'insight')
@@ -111,11 +109,28 @@ describe Character do
 
 	it 'It Should be able to apply class and personality proficiency.' do
 		a = Character.new('Trajan')
+		a.create_skills
 		a.choose_class('Rogue', 'deception', 'perception', 'acrobatics', 'insight')
 		a.choose_personality('Sailor')
 		a.choose_race('Tiefling', 'black')
 		a.apply
 		expect(a.class.class).to eq(Rogue)
 		expect(a.class.skills.length).to eq(4)
+	end
+
+	it 'It Should be able to create a Character with a name and skills you set.' do
+		a = Character.new('Trajan')
+		a.create_skills
+		a.skills.strength = 18
+		a.skills.intelligence = 18
+		a.skills.wisdom = 18
+		a.skills.dexterity = 18
+		a.skills.constitution = 18
+		a.skills.charisma	 = 18
+		a.choose_class('Rogue', 'deception', 'perception', 'acrobatics', 'insight')
+		a.choose_personality('Sailor')
+		a.choose_race('Tiefling', 'black')
+		a.apply
+		p a.proficiency
 	end
 end

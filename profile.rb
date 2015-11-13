@@ -74,7 +74,13 @@ class Character
   def apply
     return false unless @class.skills && @personality.skills && @race
     @proficiency.apply_class_personality_modifiers(@class.skills, @personality.skills)
-    @proficiency.apply_race_modifiers(@race.ability_scores)
+    input = Hash.new
+    race = @race.skill_list
+    skills = @skills.skills
+    race.each do |x,y|
+      input[x] = race[x] + skills[x]
+    end
+    @proficiency.apply_race_modifiers(input)
   end
 
 end

@@ -5,7 +5,7 @@ class Skills
   end
 
   def skills
-    return {
+    {
       :strength => @strength,
       :dexterity => @dexterity,
       :wisdom => @wisdom,

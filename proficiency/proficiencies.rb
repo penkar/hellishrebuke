@@ -1,5 +1,3 @@
-$modifiers = {1=>-5, 2=>-4,3=>-4,4=>-3,5=>-3,6=>-2,7=>-2,8=>-1,9=>-1,10=>0,11=>0,12=>1,13=>1,14=>2,15=>2,16=>3,17=>3,18=>4,19=>4,20=>5,21=>5,22=>6,23=>6,24=>7,25=>7,26=>8,27=>8,28=>9,29=>9,30=>10}
-
 class Proficiency
   attr_accessor :acrobatics, :animal_handling, :arcana, :athletics, :deception, :history, :insight, :intimidation, :investigation, :medicine, :nature, :perception, :performance, :persuasion, :religion, :sleight_of_hand, :stealth, :survival, :proficiency
   def initialize
@@ -23,14 +21,25 @@ class Proficiency
     @survival = 0
   end
 
-  # def getInitialStat
-  #   array = Array.new(6)
-  #   return array.map!{rand(6)+1}.sort.last(3).inject(:+)
-  # end
-
   def apply_race_modifiers(abilities)
-    p abilities
-
+    @acrobatics += $modifiers[abilities[$translate[:acrobatics]]]
+    @animal_handling += $modifiers[abilities[$translate[:animal_handling]]]
+    @arcana += $modifiers[abilities[$translate[:arcana]]]
+    @athletics += $modifiers[abilities[$translate[:athletics]]]
+    @deception += $modifiers[abilities[$translate[:deception]]]
+    @history += $modifiers[abilities[$translate[:history]]]
+    @insight += $modifiers[abilities[$translate[:insight]]]
+    @intimidation += $modifiers[abilities[$translate[:intimidation]]]
+    @investigation += $modifiers[abilities[$translate[:investigation]]]
+    @medicine += $modifiers[abilities[$translate[:investigation]]]
+    @nature += $modifiers[abilities[$translate[:nature]]]
+    @perception += $modifiers[abilities[$translate[:perception]]]
+    @performance += $modifiers[abilities[$translate[:performance]]]
+    @persuasion += $modifiers[abilities[$translate[:persuasion]]]
+    @religion += $modifiers[abilities[$translate[:religion]]]
+    @sleight_of_hand += $modifiers[abilities[$translate[:sleight_of_hand]]]
+    @stealth += $modifiers[abilities[$translate[:stealth]]]
+    @survival += $modifiers[abilities[$translate[:survival]]]
   end
 
   def apply_class_personality_modifiers(classarr, personalityarr)
