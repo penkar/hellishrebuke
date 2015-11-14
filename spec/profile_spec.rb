@@ -131,6 +131,11 @@ describe Character do
 		a.choose_personality('Sailor')
 		a.choose_race('Tiefling', 'black')
 		a.apply
-		p a.proficiency
+		expect(a.proficiency.get_modifiers[:deception]).to eq(7)
+		expect(a.proficiency.get_modifiers[:athletics]).to eq(6)
+		expect(a.proficiency.get_modifiers[:arcana]).to eq(4)
+		expect(a.proficiency.get_modifiers[:intimidation]).to eq(5)
+		expect(a.proficiency.get_modifiers[:performance]).to eq(5)
+		expect(a.proficiency.get_modifiers[:survival]).to eq(4)
 	end
 end
