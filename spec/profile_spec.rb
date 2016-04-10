@@ -7,7 +7,6 @@ describe Character do
 
 	it 'It Should be able to create a Character with a name and skills.' do
     a = Character.new('Trajan')
-		a.create_skills
 		expect(a.skills.class).to eq(Skills)
 		expect(a.skills.strength).to be_between(2,19)
 		expect(a.skills.intelligence).to be_between(2,19)
@@ -20,7 +19,6 @@ describe Character do
 
 	it 'It Should be able to create a Character with a name and skills you set.' do
 		a = Character.new('Trajan')
-		a.create_skills
 		a.skills.strength = 18
 		a.skills.intelligence = 18
 		a.skills.wisdom = 18
@@ -109,7 +107,6 @@ describe Character do
 
 	it 'It Should be able to apply class and personality proficiency.' do
 		a = Character.new('Trajan')
-		a.create_skills
 		a.choose_class('Rogue', 'deception', 'perception', 'acrobatics', 'insight')
 		a.choose_personality('Sailor')
 		a.choose_race('Tiefling', 'black')
@@ -120,7 +117,6 @@ describe Character do
 
 	it 'It Should be able to create a Character with a name and skills you set.' do
 		a = Character.new('Trajan')
-		a.create_skills
 		a.skills.strength = 18
 		a.skills.intelligence = 18
 		a.skills.wisdom = 18
@@ -137,5 +133,13 @@ describe Character do
 		expect(a.proficiency.get_modifiers[:intimidation]).to eq(5)
 		expect(a.proficiency.get_modifiers[:performance]).to eq(5)
 		expect(a.proficiency.get_modifiers[:survival]).to eq(4)
+	end
+
+	it 'It should be able to use the dynamic methods to set skills.' do
+		a = Character.new('Trajan')
+		p a.skills
+		# a.strength(10)
+		p a.skills.methods.sort
+		expect(a.skills.strength).to eq(10)
 	end
 end

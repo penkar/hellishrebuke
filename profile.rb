@@ -50,13 +50,10 @@ $personalityHash = {
 class Character
   attr_accessor :ability, :race, :name, :proficiency, :class, :race, :personality, :skills
   def initialize(name)
-    @name = name
-    @proficiency = Proficiency.new
-  end
-
-  def create_skills
     @skills = Skills.new
     @skills.randomize_skills
+    @name = name
+    @proficiency = Proficiency.new
   end
 
   def choose_class(type, generic1, generic2, generic3 = false, generic4 = false)
@@ -83,4 +80,20 @@ class Character
     @proficiency.apply_race_modifiers(input)
   end
 
+
+
+  def self.define_component_skills(skill)
+    define_method(skill){|point|
+      @skills.send("#{skill}=".to_sym = point)
+      p @skills
+      @skills
+    }
+  end
+
+  define_component_skills :strength
+  define_component_skills :dexterity
+  define_component_skills :wisdom
+  define_component_skills :intelligence
+  define_component_skills :constitution
+  define_component_skills :charisma
 end
